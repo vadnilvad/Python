@@ -10,7 +10,8 @@
 
 #Program for Assignment_2020_05_16_001
 
-	##Awaiting topic to be covered in class. value fetch from nexted list/collection is pending Learning.
+	s = [1,2,3,[4,5,[6,7,8,[9,[10,[11]]]]]]
+	s[0],s[2],s[3][1],s[3][2][1],s[3][2][3][0],s[3][2][3][1][1][0]
 
 #End of Program for Assignment_2020_05_16_001
 
@@ -87,6 +88,8 @@
 
 	textlist=text.split("\n")
 	print (textlist[-2]+"\n"+textlist[-1])
+
+	print ("max\tmin\n"+listofTemp[0]["max"])
 	
 	##Above is WA i can figure out to cater purpose, i am not sure if print itself have some advance level of filtering that can print last two lines. If any such hoping to see it is being covered eventually in comming classes. Sphoorthi Oum.
 
@@ -181,3 +184,77 @@
 
 ####End of Program for Assignment_2020_05_21_001
 
+
+####Class work 2020_05_23_001 BEGIN
+
+	#Collect name, age, edu, contact & area from user
+	#Store them in dictionary
+
+		name=input("Name :").upper()
+		edu=input("education :").upper()
+		age=input("Age :").upper()
+		cont_num=int(input("Contact number :"))
+		area=input("Area :").upper()
+
+	# define dict to store all the data
+
+		details={}
+
+	# add all the values to dict
+
+		details["name"]=name
+		details["education"]=edu
+		details["Age"]=age
+		details["Contact_number"]=cont_num
+		details["Area"]=area
+
+####Class work 2020_05_23_001 END
+
+
+
+
+
+####Class work 2020_05_23_001 BEGIN
+
+	listofTemp=[
+
+	{
+	"day": 42.15,
+	"min": 37.75,
+	"max": 45.29,
+	"night": 37.75,
+	"eve": 44.39,
+	"morn": 39.61
+	},
+
+	{
+	"day": 45.72,
+	"min": 33.81,
+	"max": 47.01,
+	"night": 37.38,
+	"eve": 45.36,
+	"morn": 33.81
+	},
+
+	{
+	"day": 46.72,
+	"min": 34.76,
+	"max": 47.71,
+	"night": 37.38,
+	"eve": 45.98,
+	"morn": 34.76
+	},
+	]
+
+# extract the max temparatures from all the dictionaries in the list above
+	print("\nDict#1 max Value",listofTemp[0]["max"],"\nDict#2 max Value",listofTemp[1]["max"],"\nDict#2 max Value",listofTemp[2]["max"])
+
+# print all the min & max temparatures
+	for i in listofTemp:
+	print("min temperature :",i["min"],"\tmax temperature :",i["max"])
+
+# print the third dictionary's morning temp- "morn" key
+	listofTemp[2]["morn"]
+
+
+####Class work 2020_05_23_001 END
